@@ -1,1 +1,107 @@
-/* Add your CSS here */
+/* General Reset & Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background: #0071c5;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.toc {
+  background: #e0e0e0;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.toc ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #0071c5;
+  font-weight: bold;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem;
+  scroll-padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-item {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-item img:hover {
+  transform: scale(1.05);
+}
+
+.back-to-top {
+  text-align: center;
+  margin: 2rem;
+}
+
+.back-to-top a {
+  background: #0071c5;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.back-to-top a:hover {
+  background: #005999;
+}
+
+@media (max-width: 768px) {
+  .scroll-item {
+    flex: 0 0 95%;
+  }
+}
